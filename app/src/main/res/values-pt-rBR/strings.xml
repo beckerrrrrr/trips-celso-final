@@ -28,24 +28,20 @@
     <string name="login_in">Logar</string>
     <string name="over_eighteen">Maior de 18?</string>
     <string name="incorrect_passemail">Email ou senha estão incorretos!</string>
-    <string name="descricao_london">Londres, capital da Inglaterra e do Reino Unido, é uma cidade do século 21 com uma história que remonta à era romana.</string>
-    <string name="descricao_santorini">Santorini é uma das ilhas Cíclades no Mar Ageu. Ela foi devastada por uma erupção vulcânica no século 16 A.C., moldando para sempre sua paisagem ondulada.</string>
-    <string name="descricao_roma">Roma, a capital da Itália, é uma cidade cosmopolita, enorme, com quase 3.000 anos de arte, arquitetura e cultura influentes no mundo todo e à mostra.</string>
-    <string name="descricao_bariloche">San Carlos de Bariloche (comumente chamada de Bariloche) é uma cidade na região da Patagônia argentina. </string>
-    <string name="descricao_orlando">Orlando é uma cidade localizada no estado norte-americano da Flórida, no condado de Orange, do qual é sede.</string>
-    <string name="descricao_cancun">Cancún, uma cidade mexicana situada na Península de Iucatã, na costa do Mar do Caribe, é conhecida por suas praias, seus vários resorts e sua vida noturna.</string>
-    <string name="descricao_dubai">Dubai é uma cidade e um emirado dos Emirados Árabes Unidos conhecida pelos shoppings de luxo, pela arquitetura ultramoderna e pela animada vida noturna.</string>
-    <string name="descricao_punta">Punta Cana, região que corresponde ao extremo leste da República Dominicana, é banhada pelo Mar do Caribe e pelo Oceano Atlântico.</string>
-    <string name="descricao_amsterda">Amsterdã é a capital da Holanda, conhecida por seu patrimônio artístico, um elaborado sistema de canais e casas estreitas com telhados de duas águas, legados da era dourada do século XVII na cidade.</string>
-    <string name="descricao_veneza">Veneza, a capital da região de Vêneto, no norte da Itália, é formada por mais de 100 pequenas ilhas em uma lagoa no Mar Adriático.</string>
-    <string name="london_name">LONDRES</string>
-    <string name="santorini_name">SANTORINI</string>
-    <string name="rome_name">ROMA</string>
-    <string name="bariloche_name">BARILOCHE</string>
-    <string name="orlando_name">ORLANDO</string>
-    <string name="cancun_name">CANCÚN</string>
-    <string name="dubai_name">DUBAI</string>
-    <string name="punta_name">PUNTA CANA</string>
-    <string name="amsterdam_name">AMSTERDÃ</string>
-    <string name="venice_name">VENEZA</string>
-</resources>
+
+        <string name="santiago_name">Santiago</string>
+        <string name="descricao_santiago">A capital do Chile, conhecida por suas paisagens urbanas e culturais vibrantes.</string>
+
+        <string name="valparaiso_name">Valparaíso</string>
+        <string name="descricao_valparaiso">Uma cidade costeira famosa por suas colinas coloridas e arte de rua.</string>
+
+        <string name="atacama_name">Deserto do Atacama</string>
+        <string name="descricao_atacama">O deserto mais seco do mundo, conhecido por suas paisagens lunares e salinas.</string>
+
+        <string name="torresDelPaine_name">Torres del Paine</string>
+        <string name="descricao_torresDelPaine">Um parque nacional famoso por suas montanhas impressionantes e trilhas de trekking.</string>
+
+        <string name="islaDePascua_name">Isla de Pascua</string>
+        <string name="descricao_islaDePascua">Uma ilha remota no Pacífico, conhecida por suas estátuas Moai e cultura Rapa Nui.</string>
+    </resources>
+

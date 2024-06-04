@@ -24,6 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -33,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.logintrip.R
+import com.example.logintrip.repository.CadastroRepository
 import com.example.logintrip.ui.theme.LoginTripTheme
 
 @Composable
@@ -46,6 +48,7 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
     var mensagemErroState = remember {
         mutableStateOf("")
     }
+    val cr = CadastroRepository(LocalContext.current)
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -81,7 +84,7 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
                 )
                 OutlinedTextField(value = emailState.value,
                     onValueChange = {
-                                    emailState.value = it
+                        emailState.value = it
                     },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedBorderColor = Color.Magenta,
@@ -109,7 +112,7 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
                 )
                 OutlinedTextField(value = senhaState.value,
                     onValueChange = {
-                                    senhaState.value = it
+                        senhaState.value = it
                     },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedBorderColor = Color.Magenta,
@@ -151,6 +154,26 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
                     Column(
                         horizontalAlignment = Alignment.End
                     ) {
+                        Button(
+                            onClick = {
+                                val (usuarioEncontrado, dadosUsuario) = cr.login(emailState.value, senhaState.value)
+                                if (usuarioEncontrado){
+                                    controleDeNavegacao.navigate("home")
+                                } else {
+                                    mensagemErroState.value = "E-mail ou senha incorretos!"
+                                }
+                            },
+                            modifier = Modifier
+                                .width(150.dp)
+                                .height(50.dp),
+                            colors = ButtonDefaults.buttonColors(Color.Magenta)
+                        ) {
+                            Text(
+                                text = stringResource(id = R.string.sign_in),
+                                fontWeight = FontWeight.ExtraBold,
+                                fontSize = 20.sp
+                            )
+                        }
                         Row(modifier = Modifier.padding(top = 10.dp)) {
                             Text(
                                 text = stringResource(id = R.string.havent_account),
@@ -191,7 +214,10 @@ fun TelaLogin(controleDeNavegacao: NavHostController) {
 @Composable
 fun TelaDeLoginPreview() {
 
-    }
+}
+
+
+
 
 
 

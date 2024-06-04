@@ -107,7 +107,7 @@ fun TelaHome(){
                             .size(90.dp),
                         shape = CircleShape
                     ){
-                        Image(painter = painterResource(id = R.drawable.mulher),
+                        Image(painter = painterResource(id = R.drawable.laurynhill),
                             contentDescription = "Foto de Perfil",
                             contentScale = ContentScale.Crop,
                             )
@@ -117,7 +117,7 @@ fun TelaHome(){
                         ){
                             Spacer(modifier = Modifier.height(85.dp))
                             Text(
-                                text = "Susanna Hoffs",
+                                text = "Lauryn Hill",
                                 color = Color.White,
                                 fontWeight = FontWeight.Light)
                         }
@@ -275,18 +275,7 @@ fun TelaHome(){
                                             fontWeight = FontWeight.Medium,
                                             color = Color.Magenta
                                         )
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
-}
+                                    } } } } } } } } } }
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable

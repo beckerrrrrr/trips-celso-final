@@ -21,11 +21,6 @@ class CategoriesRepository {
             stringResource(id = R.string.categories_snow),
             imagem = painterResource(id = R.drawable.esquiar)
         )
-        val beach = Categories(
-            3,
-            stringResource(id = R.string.categories_beach),
-            imagem = painterResource(id = R.drawable.beach)
-        )
         val roadtrip = Categories(
             4,
             stringResource(id = R.string.categories_road),
@@ -51,6 +46,6 @@ class CategoriesRepository {
             stringResource(id = R.string.categories_island),
             imagem = painterResource(id = R.drawable.ilha)
         )
-        return listOf(montain,snow,beach, roadtrip, historic,nature,city,island)
+        return listOf(montain,snow, roadtrip, historic,nature,city,island)
     }
 }

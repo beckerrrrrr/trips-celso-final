@@ -8,11 +8,19 @@ class CadastroRepository (context: Context){
 
        private val db = CadastroDb.getBancoDeDados(context).contatoDao()
 
-        fun salvar (contato: Cadastro):Long{
-            return db.salvar(contato)
-       }
+    fun salvar(cadastro: Cadastro): Long{
+        return db.salvar(cadastro)
+    }
 
-        fun listarTodosOsCadastros(): List<Cadastro>{
-           return db.listarTodosOsCadastros()
-        }
+    fun buscarTodosOsUsuariois(): List<Cadastro>{
+        return db.listarTodosOsCadastros()
+    }
+
+    fun buscarUsuarioPeloId(id: Long): Cadastro{
+        return db.buscarContatoPeloId(id)
+    }
+    fun login (email:String, senha:String): Pair<Boolean, Cadastro?> {
+        var usuario = db.login(email, senha)
+        return Pair(usuario != null, usuario)
+    }
     }

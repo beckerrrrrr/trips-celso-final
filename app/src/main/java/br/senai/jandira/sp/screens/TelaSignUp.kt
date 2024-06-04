@@ -260,7 +260,8 @@ fun TelaSignUp(controleDeNavegacao: NavHostController){
                                 senha = passwordState.value,
                                 overEighteen = isOver18State.value
                             )
-                                cr.salvar(cadastro)
+                                cr.salvar(cadastro = cadastro)
+                                controleDeNavegacao.navigate("login")
                                       },
                             modifier = Modifier
                                 .width(300.dp)

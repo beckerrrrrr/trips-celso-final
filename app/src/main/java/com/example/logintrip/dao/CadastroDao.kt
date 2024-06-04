@@ -23,4 +23,13 @@ interface CadastroDao {
 
     @Query("SELECT * FROM tbl_cadastro WHERE id = :id")
     fun buscarContatoPeloId(id: Long):Cadastro
+
+    @Query("SELECT * FROM tbl_cadastro where nome = :nome order by nome asc")
+    fun buscarUsuarioPeloNome(nome: String): List<Cadastro>
+
+    @Query("SELECT * FROM tbl_cadastro WHERE email = :email")
+    fun buscarUsuarioPeloEmail(email: String): Cadastro?
+
+    @Query("SELECT * from tbl_cadastro where email= :email and senha = :senha")
+    fun login(email: String, senha:String): Cadastro?
 }
